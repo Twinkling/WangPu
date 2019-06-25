@@ -41,6 +41,17 @@
         src="https://g.alicdn.com/??kissy/k/1.4.16/seed-min.js,kg/kmd-adapter/0.1.5/index.js,kg/kmd-adapter/0.1.5/util.js,kg/global-util/1.0.7/index-min.js,tb/tracker/4.3.18/index.js,kg/tb-nav/2.5.4/index-min.js"></script>
     <script>KISSY.config({ modules: { 'flash': { alias: ['gallery/flash/1.0/'] } } }); KISSY.use('kg/global-util/1.0.7/'); KISSY.config({ modules: { 'kg/tb-nav': { alias: 'kg/tb-nav/2.5.4/', requires: ['kg/global-util/1.0.7/'] } } }); KISSY.ready(function () { KISSY.use('kg/tb-nav') });</script>
     <script src="https://g.alicdn.com/shop/wangpu/1.9.7/init-async-min.js?t=20140523.js"></script>
+    <style>
+        pre {
+            display: flex;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 0 6px 0 #ccc;
+        }
+        body {
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -105,6 +116,69 @@
                 </div>
             </div>
         </div>
+        <pre>
+            <xmp>
+                <div class="main">
+                    <div class="countdown">
+                        <h2>
+                            <span>今日推荐:</span>【感恩柒月 10:00开团】现价109元包邮 原价199元 吸尘器
+                        </h2>
+                        <div class="info-box">
+                            <div class="meta">
+                                <div class="J_TWidget" data-widget-type="Countdown" data-widget-config="{
+                                            'endTime': '30000',
+                                            'interval': 1000, 
+                                            'timeRunCls': '.ks-countdown-run', 
+                                            'timeUnitCls':{
+                                                'd': '.ks-d',       
+                                                'h': '.ks-h',       
+                                                'm': '.ks-m',       
+                                                's': '.ks-s',       
+                                                'i': '.ks-i'        
+                                            },
+                                            'minDigit': 1,
+                                            'timeEndCls': '.ks-countdown-end'
+                                        }">
+                                    <!-- 购买按钮 -->
+                                    <div class="item-buy ks-countdown-run">
+                                        <strong class="price"><b>￥</b>109<span>.00</span></strong>
+                                        <a class="buy" href="http://ju.taobao.com/tg/today_items.htm" target="_blank">
+                                        </a>
+                                    </div>
+
+                                    <!-- 价格折扣 -->
+                                    <dl class="item-prices">
+                                        <dt class="price">原 价</dt>
+                                        <dt class="discount">折 扣</dt>
+                                        <dt class="save">节 省</dt>
+                                        <dd class="price"><del>￥199.00</del></dd>
+                                        <dd class="discount">5.4</dd>
+                                        <dd class="save">￥99.00</dd>
+                                    </dl>
+                                    <!-- 倒计时 -->
+                                    <div class="time-count ks-countdown-run">
+                                        <p class="tit">剩余时间: </p>
+                                        <span class="ks-d value"></span><span class="unit">天</span>
+                                        <span class="ks-h value"></span><span class="unit">小时</span>
+                                        <span class="ks-m value"></span><span class="unit">分</span>
+                                        <!-- 如果有0.1秒级别的变化建议以gif背景图片的形式变化 -->
+                                        <span class="ks-s value"></span><span class="unit">秒</span>
+                                    </div>
+                                    <!--/time-count-->
+                                </div>
+                            </div>
+                            <div class="picbox">
+                                <div class="pic">
+                                    <a target="_blank"
+                                        href="http://item.taobao.com/item.htm?id=12291384145&amp;key=C1YId0zGIlsd%2BRuRB06lpYpNM750V7zhXynPSbg%3D&amp;tracelog=jubuybigpic"><img
+                                            src="http://img02.taobaocdn.com/bao/uploaded/i4/T1npxPXhtEXXb1upjX.jpg_670x670.jpg"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+        </pre>
 
         <h3>例子2</h3>
         <div class="main">
@@ -190,6 +264,93 @@
                 </div>
             </div>
         </div>
+        <pre>
+            <xmp>
+                <div class="main">
+                    <div class="countdown">
+                        <h2>
+                            <span>今日推荐:</span>【感恩柒月 10:00开团】现价109元包邮 原价199元 吸尘器
+                        </h2>
+                        <div class="info-box">
+                            <div class="J_TWidget" data-widget-type="Countdown" data-widget-config="{
+                                        'endTime': '10000',
+                                        'interval': 1000, 
+                                        'timeRunCls': '.ks-countdown-run', 
+                                        'timeUnitCls':{
+                                        'd': '.ks-d',       
+                                        'h': '.ks-h',       
+                                        'm': '.ks-m',       
+                                        's': '.ks-s',       
+                                        'i': '.ks-i'        
+                                        },
+                                        'minDigit': 1,
+                                        'timeEndCls': '.ks-countdown-end'
+                                }">
+                                <div class="meta">
+                                    <!-- 购买按钮 -->
+                                    <!-- 倒计时进行中显示的内容，即将开始 -->
+                                    <div class="ks-countdown-run">
+                                        <div class="item-buy">
+                                            <strong class="price"><b>￥</b>109<span>.00</span></strong>
+                                            <a class="start btn" href="http://ju.taobao.com/tg/today_items.htm" target="_blank">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 倒计时结束时显示的内容，参团 -->
+                                    <div class="ks-countdown-end">
+                                        <div class="item-buy">
+                                            <strong class="price"><b>￥</b>100<span>.00</span></strong>
+                                            <a class="buy btn" href="http://ju.taobao.com/tg/today_items.htm" target="_blank">
+                                            </a>
+                                        </div>
+                                    </div>
+        
+                                    <!-- 价格折扣 -->
+                                    <dl class="item-prices">
+                                        <dt class="price">原 价</dt>
+                                        <dt class="discount">折 扣</dt>
+                                        <dt class="save">节 省</dt>
+                                        <dd class="price"><del>￥199.00</del></dd>
+                                        <dd class="discount">5.4</dd>
+                                        <dd class="save">￥99.00</dd>
+                                    </dl>
+                                    <!-- 倒计时 -->
+                                    <div class="time-count ks-countdown-run">
+                                        <p class="tit">剩余时间: </p>
+                                        <span class="ks-d value"></span><span class="unit">天</span>
+                                        <span class="ks-h value"></span><span class="unit">小时</span>
+                                        <span class="ks-m value"></span><span class="unit">分</span>
+                                        <!-- 如果有0.1秒级别的变化建议以gif背景图片的形式变化 -->
+                                        <span class="ks-s value"></span><span class="unit">秒</span>
+                                    </div>
+                                    <!--/time-count-->
+                                </div>
+                                <!-- 倒计时进行中显示的内容，绿色边框 -->
+                                <div class="ks-countdown-run">
+                                    <div class="picbox">
+                                        <div class="pic">
+                                            <a target="_blank"
+                                                href="http://item.taobao.com/item.htm?id=12291384145&amp;key=C1YId0zGIlsd%2BRuRB06lpYpNM750V7zhXynPSbg%3D&amp;tracelog=jubuybigpic"><img
+                                                    src="http://img02.taobaocdn.com/bao/uploaded/i4/T1npxPXhtEXXb1upjX.jpg_670x670.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 倒计时结束时显示的内容，红色边框 -->
+                                <div class="ks-countdown-end">
+                                    <div class="picbox">
+                                        <div class="pic">
+                                            <a target="_blank"
+                                                href="http://item.taobao.com/item.htm?id=12291384145&amp;key=C1YId0zGIlsd%2BRuRB06lpYpNM750V7zhXynPSbg%3D&amp;tracelog=jubuybigpic"><img
+                                                    src="http://img02.taobaocdn.com/bao/uploaded/i4/T1npxPXhtEXXb1upjX.jpg_670x670.jpg"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xmp>
+        </pre>
     </div>
     <!-- <style>
         .main {
