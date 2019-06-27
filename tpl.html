@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+    <link rel="stylesheet" href="//g.alicdn.com/??kg/global-util/1.0.6/index-min.css,kg/tb-nav/2.4.1/index-min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/shop/??wangpu/1.9.7/layout/layout-min.css,wangpu/1.9.7/global/footer-min.css,wangpu/1.9.7/global/copyright-min.css,modules/2.1.9/modules-default-min.css">
+</head>
+<body>
+
+    <div class="GaoDing" style="margin: 0 auto;width: 950px;">
+        <div class="GaoDing-wrapper" style="position: relative;left: -485px;width: 1920px;">
+            <div class="GaoDing-conteiner" style="margin: 0 auto;width: 1200px;overflow: hidden;">
+                <div style="padding: 10px 0;text-align: center;">
+                    <h3 data-text-type="title" style="margin: 0;font-size: 30px;">HOT SELLING GOODS</h3>
+                    <span data-text-type="sub-title" style="font-size: 16px;">热卖畅销精品</span>
+                </div>
+                <ul>
+                    <li style="float: left;margin-right: 30px;width: 380px;height: 380px;">
+                        <a class="trigger" data-link href="">
+                            <img data-img src="https://gd1.alicdn.com/imgextra/i1/848470502/O1CN011FZxHxRhSWOc8pb_!!848470502.jpg_430x430.jpg" alt="" style="width: 380px;height: 380px;">
+                        </a>
+                        <div 
+                            class="J_TWidget"
+                            data-widget-type="Popup"
+                            style="width: 380px;height: 380px;display: none;"
+                        ></div>
+                    </li>
+                    <li style="float: left;margin-right: 30px;width: 380px;height: 380px;">
+                        <a class="trigger" data-link href="">
+                            <img data-img src="https://gd1.alicdn.com/imgextra/i1/848470502/O1CN011FZxHxRhSWOc8pb_!!848470502.jpg_430x430.jpg" alt="" style="width: 380px;height: 380px;">
+                        </a>
+                        <div 
+                            class="J_TWidget"
+                            data-widget-type="Popup"
+                            style="width: 380px;height: 380px;display: none;"
+                        ></div>
+                    </li>
+                    <li style="float: left;width: 380px;height: 380px;">
+                        <a class="trigger" data-link href="">
+                            <img data-img src="https://gd1.alicdn.com/imgextra/i1/848470502/O1CN011FZxHxRhSWOc8pb_!!848470502.jpg_430x430.jpg" alt="" style="width: 380px;height: 380px;">
+                        </a>
+                        <div 
+                            class="J_TWidget"
+                            data-widget-type="Popup"
+                            style="width: 380px;height: 380px;display: none;"
+                        ></div>
+                    </li>
+                    <!-- <li style="width:0;height:0;clear:both;"></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tpl = {
+            title: '热卖展示',
+            // width: 
+            height: 469,
+            content: document.getElementsByClassName('GaoDing')[0].outerHTML,
+            config: {
+                popup: { // 所有 Popup 使用同一份配置
+                    trigger: '.trigger',
+                }
+            }
+        }
+        config = {
+            columns: [3], // 提供多个选项，则表示可以平分宽度，每项可以单独设置宽度，并自适应其他参数(字体大小, 高度)，默认 [1]
+            title: '', // 标题, 为空则不展示标题栏，标题栏包含副标题
+            subTitle: '', // 副标题
+            total: 0, // 产品总个数, 循环 content
+            column: 3, // 最终结果是多少列
+            content: {
+                _3: [{
+                    htmlStr: `<a class="trigger" data-link href="" style="width: 380px;height: 380px;">
+                                <img data-img src="https://gd1.alicdn.com/imgextra/i1/848470502/O1CN011FZxHxRhSWOc8pb_!!848470502.jpg_430x430.jpg" alt="" style="width: 380px;height: 380px;">
+                            </a>`,
+                    type: 'Popup',
+                    category: '',
+                    space: 30, // 间隔
+                    config: {
+                        trigger: '.trigger',
+                        align: {
+                            node: '.trigger',
+                            points: ['cc', 'cc'],
+                            offset: [0, 0]
+                        }
+                    },
+                    isFullPage: false, // Carousel、Slide 才能够选择是否全屏
+                    item: { // 配置每个产品信息
+                        title: '',
+                        img: '',
+                        desc: '',
+                        detail: '',
+                        price: '',
+                        buyNow: '立即购买',
+                        mask: {
+                            width: 380,
+                            height: 380,
+                            url: '',
+                        },
+                    }
+                }]
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Popup - 弹出层</title>
+    <link rel="stylesheet" href="//g.alicdn.com/??kg/global-util/1.0.6/index-min.css,kg/tb-nav/2.4.1/index-min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/shop/??wangpu/1.9.7/layout/layout-min.css,wangpu/1.9.7/global/footer-min.css,wangpu/1.9.7/global/copyright-min.css,modules/2.1.9/modules-default-min.css">
+    <script>
+        window.g_hb_monitor_st = +new Date();
+        window.g_config = {
+            appId: 2,
+            assetsHost: "//assets.alicdn.com",
+            toolbar: false,
+            pageType: "wangpu",
+            jstracker2: {
+                url: "http://shop.taobao.com/taobao"
+            }
+        };
+        window.shop_config = {
+            hasImpress: false,
+            shopId: "127009532",
+            siteId: "12",
+            userId: "2593313421",
+            user_nick: "%E5%A5%87%E6%9E%97%E6%9C%BA%E7%94%B5",
+            shopCategoryId: "14",
+            async_mod: {
+                url: "/widgetAsync.htm?site_instance_id=419048613",
+                hps: 800
+            },
+            template: {
+                name: "",
+                id: "206531",
+                design_nick: ""
+            }
+        };
+    </script>
+    <script
+        src="https://g.alicdn.com/??kissy/k/1.4.16/seed-min.js,kg/kmd-adapter/0.1.5/index.js,kg/kmd-adapter/0.1.5/util.js,kg/global-util/1.0.7/index-min.js,tb/tracker/4.3.18/index.js,kg/tb-nav/2.5.4/index-min.js"></script>
+    <script>KISSY.config({ modules: { 'flash': { alias: ['gallery/flash/1.0/'] } } }); KISSY.use('kg/global-util/1.0.7/'); KISSY.config({ modules: { 'kg/tb-nav': { alias: 'kg/tb-nav/2.5.4/', requires: ['kg/global-util/1.0.7/'] } } }); KISSY.ready(function () { KISSY.use('kg/tb-nav') });</script>
+    <script src="https://g.alicdn.com/shop/wangpu/1.9.7/init-async-min.js?t=20140523.js"></script>
+</head>
+
+<body id="page">
+    <div id="content">
+        <h3>Popup 测试</h3>
+        <div class="trigger" id="trigger" style="width: 300px;height: 300px;overflow: hidden">
+            <img src="https://img.alicdn.com/imgextra/i2/2067408037/O1CN01Wva90N29EzicaEt1P_!!2067408037.jpg" class="img" style="width: 300px;height: 300px">
+        </div>
+        <div
+            class="J_TWidget"
+            data-widget-type="Popup"
+            data-widget-config="{
+                'trigger':'.trigger',
+                'align':{
+                    'node':'.trigger',
+                    'points':['cc', 'cc'],
+                    'offset':[0, 0]
+                }
+            }"
+            style="display: none;"
+        >
+            <div style="width: 300px; height: 300px;background: url(https://img.alicdn.com/imgextra/i2/2067408037/O1CN01eiCelp29EzidXw0Rp_!!2067408037.gif) center;"></div>
+        </div>
+        <h3>Carousel 测试失败</h3>
+        <h3>Countdown 测试</h3>
+        <div class="J_TWidget" data-widget-type="Countdown" data-widget-config="{
+            'endTime': '30000',
+            'interval': 1000, 
+            'timeRunCls': '.ks-countdown-run', 
+            'timeUnitCls':{
+                'd': '.ks-d',       
+                'h': '.ks-h',       
+                'm': '.ks-m',       
+                's': '.ks-s',       
+                'i': '.ks-i'        
+            },
+            'minDigit': 1,
+            'timeEndCls': '.ks-countdown-end'
+        }">
+            <div class="ks-countdown-run">run</div>
+            <div class="ks-countdown-end">end</div>
+            <div class="ks-d"></div>
+            <div class="ks-h"></div>
+            <div class="ks-m"></div>
+            <div class="ks-s"></div>
+            <div class="ks-i"></div>
+            aback
+            <p>hhhh</p>
+        </div>
+    </div>
+    
+    <script>
+        (function (global) {
+            global
+        })(window);
+    </script>
+</body>
+
+</html>
