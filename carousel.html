@@ -56,7 +56,7 @@
 <body>
     <div id="content">
         <h3>例子1</h3>
-        <div id="J_MallSlide" class="mall-slide J_TWidget dd" data-widget-type="Carousel" data-widget-config="{'navCls':'ks-switchable-nav','contentCls':'ks-switchable-content','effect': 'scrollx',
+        <div id="J_MallSlide" class="mall-slide J_TWidget dd" data-widget-type="Carousel" data-widget-config="{'navCls':'ks-switchable-nav','contentCls':'ks-switchable-content','effect': 'scrolly',
             'easing': 'easeNone', 'steps':1, 'circular': false, 'autoplay': true,
             'duration': 3, 'interval': 3, 'circular': true,
             'prevBtnCls': 'mall-prev', 'nextBtnCls': 'mall-next', 'disableBtnCls': 'disable' }">
@@ -112,7 +112,7 @@
                         <!--end-->
                     </li>
                 </ul>
-                <ul class="ks-switchable-nav">
+                <ul class="ks-switchable-nav" style="background: #fff;position:relative;z-index: 99999;">
                     <li class="ks-active">
                         <img src='http://img04.taobaocdn.com/tps/i4/T1nd86XeVeXXXXXXXX-440-135.jpg' />
                     </li>
@@ -299,6 +299,77 @@
                 </div>
             </xmp>
         </pre>
+
+        <h3>例子3</h3>
+        <div class="J_TWidget" style="width: 380px;" data-widget-type="Carousel" data-widget-config="{'effect':'scrollx','easing':'easeOutStrong','circular':true,
+        'contentCls': 'content', 'navCls': 'nav', 'autoplay': true}">
+            <div style="width: 380px;height: 380px;overflow: hidden;">
+                <ul class="content">
+                    <li class="" data-count style="float: left;">
+                        <a href="" class="" data-link style="display: block;width: 380px;height: 380px;">
+                            <div style="float: left;height: 340px;">
+                                <img data-img src="https://img.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg" style="width: 380px;height: 380px;" alt="">
+                            </div>
+                            <div style="float: left;width: 380px;height: 40px;line-height: 40px;background-color: rgba(187, 62, 74, .7);font-size: 14px;color: #fff;box-sizing: border-box;">
+                                <span style="float: left;padding: 0 10px;">RMB</span>
+                                <span data-price style="float: left;">149</span>
+                                <span data-buyNow style="float: right;padding: 0 10px;">立即购买</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="" data-count style="float: left;">
+                        <a href="" class="" data-link style="display: block;width: 380px;height: 380px;">
+                            <div style="float: left;height: 340px;">
+                                <img data-img src="https://img.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg" style="width: 380px;height: 380px;" alt="">
+                            </div>
+                            <div style="float: left;width: 380px;height: 40px;line-height: 40px;background-color: rgba(187, 62, 74, .7);font-size: 14px;color: #fff;box-sizing: border-box;">
+                                <span style="float: left;padding: 0 10px;">RMB</span>
+                                <span data-price style="float: left;">149</span>
+                                <span data-buyNow style="float: right;padding: 0 10px;">立即购买</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="" data-count style="float: left;">
+                        <a href="" class="" data-link style="display: block;width: 380px;height: 380px;">
+                            <div style="float: left;height: 340px;">
+                                <img data-img src="https://img.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg" style="width: 380px;height: 380px;" alt="">
+                            </div>
+                            <div style="float: left;width: 380px;height: 40px;line-height: 40px;background-color: rgba(187, 62, 74, .7);font-size: 14px;color: #fff;box-sizing: border-box;">
+                                <span style="float: left;padding: 0 10px;">RMB</span>
+                                <span data-price style="float: left;">149</span>
+                                <span data-buyNow style="float: right;padding: 0 10px;">立即购买</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="nav J_TWidget" data-widget-type="Accordion" data-widget-config="{'triggerCls': 'trigger-nav', 'panelCls': 'pannel-nav', 'autoplay': true, 'triggerType': 'mouse'}" style="margin-top: 10px;overflow: hidden">
+                <li class="trigger-nav" data-nav style="float: left;overflow: hidden;width: 120px;height: 120px;">
+                    <a href="" class="pannel-nav" data-link style="display: block;width: 118px;height: 118px;border: 1px solid red;">
+                        <img src="https://gd3.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg_120x120.jpg" alt="" data-nav-img style="width: 118px;height: 118px;">
+                    </a>
+                    <a href="" class="" data-link style="display: block;width: 118px;height: 118px;border: 1px solid transparent;">
+                        <img src="https://gd3.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg_120x120.jpg" alt="" data-nav-img style="width: 118px;height: 118px;">
+                    </a>
+                </li>
+                <li class="trigger-nav" data-nav style="float: left;overflow: hidden;width: 120px;height: 120px;margin-left: 10px;">
+                    <a href="" class="pannel-nav" data-link style="display: none;width: 118px;height: 118px;border: 1px solid red;">
+                        <img src="https://gd3.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg_120x120.jpg" alt="" data-nav-img style="width: 118px;height: 118px;">
+                    </a>
+                    <a href="" class="" data-link style="display: block;width: 118px;height: 118px;border: 1px solid transparent;">
+                        <img src="https://gd3.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg_120x120.jpg" alt="" data-nav-img style="width: 118px;height: 118px;">
+                    </a>
+                </li>
+                <li class="trigger-nav" data-nav style="float: left;overflow: hidden;width: 120px;height: 120px;margin-left: 10px;">
+                    <a href="" class="pannel-nav" data-link style="display: none;width: 118px;height: 118px;border: 1px solid red;">
+                        <img src="https://gd3.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg_120x120.jpg" alt="" data-nav-img style="width: 118px;height: 118px;">
+                    </a>
+                    <a href="" class="" data-link style="display: block;width: 118px;height: 118px;border: 1px solid transparent;">
+                        <img src="https://gd3.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg_120x120.jpg" alt="" data-nav-img style="width: 118px;height: 118px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
     <style>
         li {

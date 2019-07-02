@@ -46,7 +46,7 @@
 <body id="page">
     <div id="content">
         <h3>Popup 测试</h3>
-        <div class="trigger" id="trigger" style="width: 300px;height: 300px;overflow: hidden">
+        <!-- <div class="trigger" id="trigger" style="width: 300px;height: 300px;overflow: hidden">
             <img src="https://img.alicdn.com/imgextra/i2/2067408037/O1CN01Wva90N29EzicaEt1P_!!2067408037.jpg" class="img" style="width: 300px;height: 300px">
         </div>
         <div
@@ -63,7 +63,7 @@
             style="display: none;"
         >
             <div style="width: 300px; height: 300px;background: url(https://img.alicdn.com/imgextra/i2/2067408037/O1CN01eiCelp29EzidXw0Rp_!!2067408037.gif) center;"></div>
-        </div>
+        </div> -->
         <h3>Carousel 测试失败</h3>
         <h3>Countdown 测试</h3>
         <div class="J_TWidget" data-widget-type="Countdown" data-widget-config="{
@@ -89,6 +89,31 @@
             <div class="ks-i"></div>
             aback
             <p>hhhh</p>
+        </div>
+        <div class="J_TWidget" data-widget-type="Tabs" data-widget-config="{'contentCls': 'content', 'effect': 'fade', 'navCls': 'hidden-nav'}">
+            <div class="content">
+                <div>
+                    <div class="trigger" id="trigger" style="width: 300px;height: 300px;overflow: hidden">
+                        <img src="https://img.alicdn.com/imgextra/i2/2067408037/O1CN01Wva90N29EzicaEt1P_!!2067408037.jpg" class="img" style="width: 300px;height: 300px">
+                    </div>
+                    <div
+                        class="J_TWidget"
+                        data-widget-type="Popup"
+                        data-widget-config="{
+                            'trigger':'.trigger',
+                            'align':{
+                                'node':'.trigger',
+                                'points':['cc', 'cc'],
+                                'offset':[0, 0]
+                            }
+                        }"
+                        style="display: none;"
+                    >
+                        <div style="width: 300px; height: 300px;background: url(https://img.alicdn.com/imgextra/i2/2067408037/O1CN01eiCelp29EzidXw0Rp_!!2067408037.gif) center;"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="hidden-nav"><li class="ks-active">1</li></ul>
         </div>
     </div>
     

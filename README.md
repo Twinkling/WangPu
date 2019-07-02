@@ -11,6 +11,19 @@
 - hover 特效均可使用 Popup 实现
 
 **模板需使用绝对定位以突破 overflow: hidden 限制**
+为避免使用淘宝、天猫 CSS 类, 而直接使用 absolute 定位, 需要使用 Tabs 改造最外围 dom 结构, 并且装修页面并不会初始化 widget 相关组件, 为了能够在装修页面可以较为直观的看到装修效果, 必须使用装修页面已有的 `footer-more-trigger` 类
+```
+// 此 CSS 类的查看日期: 2019.06.28 11:32 AM
+.footer-more-trigger {
+    position: absolute;
+    padding: 6px 11px 4px 14px;
+    width: 37px;
+    line-height: 1.3;
+    border: 1px solid #fff;
+    left:-12px;
+    top:-5px;
+}
+```
 
 每个产品包含：名称，图片，描述，价格，立即购买，可能还会有蒙版
 title, img, desc, price, buyNow[, mask]
@@ -91,3 +104,21 @@ wrapper
     }]
 }
 ```
+
+**注意**
+CSS 白名单中有些属性已不支持，比如：box-sizing: border-box
+
+img.alicdn.com === gd3.alicdn.com 两处可引用到内容相同的图片
+
+data-* ==> * :
+title,
+subTitle,
+desc,
+detail,
+img,
+navImg,
+count,
+nav,
+link,
+price,
+buyNow,
