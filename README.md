@@ -105,6 +105,12 @@ wrapper
 }
 ```
 
+店铺搜索：
+- gbk 编码
+- 排序: orderType: 收藏 hotkeep_desc, 价格 price_asc, 新品 newOn_desc, 销量 hotsell_desc, 人气 coefp_desc
+- 关键字: keyword 
+- 价格区间: lowPrice, highPrice
+
 **注意**
 CSS 白名单中有些属性已不支持，比如：box-sizing: border-box
 
