@@ -61,11 +61,11 @@
         <!-- 3 ==> width: 380, space: 30 -->
         <!-- 4 ==> width: 285, space: 20 -->
         <!-- https://dianshang.gaoding.com/tool/chanpinx120w.html -->
-        <div style="padding: 25px 20px;width: 1160px;font-size: 0;background: #ccc;">
+        <div style="padding: 25px 20px;width: 1160px;font-size: 0;">
             <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
-                <a href="" data-link style="text-decoration: none;">
+                <a href="" class="trigger1" data-link style="text-decoration: none;">
                     <div data-img-bg style="height: 500px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
-                        <div class="trigger1" style="margin: 385px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                        <div class="pop1" style="margin: 385px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
                             <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
                             <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
                         </div>
@@ -73,14 +73,20 @@
                 </a>
             </div>
             <div style="display: inline-block;margin: 0 20px;width: 440px;vertical-align: top;">
-                <div data-count style="margin-bottom: 20px;height: 240px;"></div>
-                <div data-count style="height: 240px;"></div>
-            </div>
-            <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
-                <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
+                <div data-count style="margin-bottom: 20px;">
                     <a href="" data-link style="text-decoration: none;">
-                        <div data-img-bg style="height: 500px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
-                            <div class="trigger1" style="margin: 385px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                        <div data-img-bg style="height: 240px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                            <div class="trigger2" style="margin: 125px auto;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div data-count>
+                    <a href="" data-link style="text-decoration: none;">
+                        <div data-img-bg style="height: 240px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                            <div class="trigger3" style="margin: 125px auto;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
                                 <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
                                 <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
                             </div>
@@ -88,7 +94,32 @@
                     </a>
                 </div>
             </div>
-        </div>
+            <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
+                <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
+                    <a href="" data-link style="text-decoration: none;">
+                        <div data-img-bg style="height: 500px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                            <div class="trigger4" style="margin: 385px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>   
+        <div class='J_TWidget' data-widget-type='Popup' data-widget-config="{
+            'trigger':'.trigger1',
+            'align':{
+                'node':'.pop1',
+                'offset':[0,0],
+                'points':['cc','cc']
+                }
+            }">
+            <div style="padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, 1);">
+                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+            </div>
+        </div>    
 
         
         <!-- https://dianshang.gaoding.com/tool/tb_module001.html --
@@ -899,6 +930,17 @@
         //         }
         //     }
         // })();
+        (function(){
+            const video = document.createElement('video');
+            video.preload = 'metadata';
+            video.onloadedmetadata = function() {
+                console.log('test');
+                var duration = video.duration;
+                console.log(duration);
+            }
+            // video.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/flower.webm';
+            video.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/flower.mp4';
+        })();
     </script>
 </body>
 

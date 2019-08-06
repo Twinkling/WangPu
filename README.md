@@ -128,3 +128,307 @@ nav,
 link,
 price,
 buyNow,
+
+复合组件模板数据结构
+```js
+{
+    category: 'category',
+    columns: [1], // 提供多个选项，则表示可以平分宽度，每项可以单独设置宽度，并自适应其他参数(字体大小, 高度)，默认 [1]
+    title: 'HOT SELLING GOODS', // 标题, 为空则不展示标题栏，标题栏包含副标题
+    subTitle: '测试编辑器', // 副标题
+    total: 4, // 产品总个数, 循环 content
+    column: 1, // 最终结果是多少列
+    backgroundColor: '#fff',
+    bgType: 'initial',
+    topSpace: 0, // 去除顶部间隙
+    width: 1200,
+    items: [{
+        name: null, // 产品名称
+        img: {
+            width: 460,
+            height: 460,
+            url: 'https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg',
+            navWidth: 400,
+            navHeight: 400,
+        }, // 产品图片
+        images: [],
+        desc: null, // 产品描述
+        detail: null, // 产品详情
+        price: '234', // 产品价格
+        originalPrice: null, // 市场价
+        buyNow: '立即购买', // 立即购买按钮的文案
+        link: {
+            url: '',
+            target: '_blank',
+        }, // 产品链接
+    }],
+    configs: {
+        _1: [{
+            dom: `<div style="padding: 25px 20px;width: 1160px;font-size: 0;">
+                    <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
+                        <a href="" class="trigger1" data-link style="text-decoration: none;">
+                            <div data-img-bg style="height: 500px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                                <div class="pop1" style="margin: 385px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                                    <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                    <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="display: inline-block;margin: 0 20px;width: 440px;vertical-align: top;">
+                        <div data-count style="margin-bottom: 20px;">
+                            <a href="" class="trigger2" data-link style="text-decoration: none;">
+                                <div data-img-bg style="height: 240px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                                    <div class="pop2" style="margin: 125px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                                        <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                        <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div data-count>
+                            <a href="" class="trigger3" data-link style="text-decoration: none;">
+                                <div data-img-bg style="height: 240px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                                    <div class="pop3" style="margin: 125px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                                        <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                        <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div data-count style="display: inline-block;width: 340px;vertical-align: top;">
+                        <div style="display: inline-block;width: 340px;vertical-align: top;">
+                            <a href="" class="trigger4" data-link style="text-decoration: none;">
+                                <div data-img-bg style="height: 500px;background: url(https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg) no-repeat center;overflow: hidden;">
+                                    <div class="pop4" style="margin: 385px auto 0;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, .5);">
+                                        <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                        <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>`,
+            category: 'Multiple',
+            space: {
+                top: 20,
+                right: 40,
+            }, // 间隔
+            widget: [{
+                type: 'Popup',
+                config: {
+                    trigger: '.trigger1',
+                    align: {
+                        node: '.pop1',
+                        points: ['cc', 'cc'],
+                        offset: [0, 0],
+                    },
+                },
+                mask: {
+                    dom: `<div data-nav>
+                            <a data-link style="display: block;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, 1);text-decoration: none;">
+                                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                            </a>
+                        </div>`,
+                },
+                imgSize: {
+                    width: 340,
+                    height: 500,
+                },
+            }, {
+                type: 'Popup',
+                config: {
+                    trigger: '.trigger2',
+                    align: {
+                        node: '.pop2',
+                        points: ['cc', 'cc'],
+                        offset: [0, 0],
+                    },
+                },
+                mask: {
+                    dom: `<div data-nav>
+                            <a data-link style="display: block;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, 1);text-decoration: none;">
+                                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                            </a>
+                        </div>`,
+                },
+                imgSize: {
+                    width: 440,
+                    height: 240,
+                },
+            }, {
+                type: 'Popup',
+                config: {
+                    trigger: '.trigger3',
+                    align: {
+                        node: '.pop3',
+                        points: ['cc', 'cc'],
+                        offset: [0, 0],
+                    },
+                },
+                mask: {
+                    dom: `<div data-nav>
+                            <a data-link style="display: block;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, 1);text-decoration: none;">
+                                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                            </a>
+                        </div>`,
+                },
+                imgSize: {
+                    width: 440,
+                    height: 240,
+                },
+            }, {
+                type: 'Popup',
+                config: {
+                    trigger: '.trigger4',
+                    align: {
+                        node: '.pop4',
+                        points: ['cc', 'cc'],
+                        offset: [0, 0],
+                    },
+                },
+                mask: {
+                    dom: `<div data-nav>
+                            <a data-link style="display: block;padding: 16px 0;width: 270px;text-align: center;background: rgba(255, 255, 255, 1);text-decoration: none;">
+                                <h2 data-name style="font-size: 20px;color: #000;">2019 夏季新品</h2>
+                                <span data-desc style="font-size: 12px;line-height: 18px;color: #000;">新品上市 请多关注</span>
+                            </a>
+                        </div>`,
+                },
+                imgSize: {
+                    width: 340,
+                    height: 500,
+                },
+            }],
+            // 模板所需字段
+            itemProps: ['img', 'link', 'name', 'desc'],
+            count: 4,
+        }],
+    },
+},
+
+{
+    category: 'category',
+    columns: [1], // 提供多个选项，则表示可以平分宽度，每项可以单独设置宽度，并自适应其他参数(字体大小, 高度)，默认 [1]
+    title: 'HOT SELLING GOODS', // 标题, 为空则不展示标题栏，标题栏包含副标题
+    subTitle: '测试编辑器', // 副标题
+    total: 3, // 产品总个数, 循环 content
+    column: 1, // 最终结果是多少列
+    backgroundColor: '#fff',
+    bgType: 'initial',
+    topSpace: 0, // 去除顶部间隙
+    width: 1200,
+    items: [{
+        name: null, // 产品名称
+        img: {
+            width: 460,
+            height: 460,
+            url: 'https://img.alicdn.com/imgextra/i3/2067408037/O1CN01t3FpAg29EzipxN1v8_!!2067408037.jpg',
+            navWidth: 400,
+            navHeight: 400,
+        }, // 产品图片
+        images: [],
+        desc: null, // 产品描述
+        detail: null, // 产品详情
+        price: '234', // 产品价格
+        originalPrice: null, // 市场价
+        buyNow: '立即购买', // 立即购买按钮的文案
+        link: {
+            url: '',
+            target: '_blank',
+        }, // 产品链接
+    }],
+    configs: {
+        _1: [{
+            dom: `<ul class="trigger" style="width: 1200px;overflow: hidden;">
+                    <li data-count style="float: left;margin-right: 6px;width: 396px;height: 450px;">
+                        <img data-img src="https://img.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg" alt="" style="width: 396px;height: 450px;">
+                    </li>
+                    <li data-count style="float: left;margin-right: 6px;width: 396px;height: 450px;">
+                        <img data-img src="https://img.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg" alt="" style="width: 396px;height: 450px;">
+                    </li>
+                    <li data-count style="float: left;width: 396px;height: 450px;">
+                        <img data-img src="https://img.alicdn.com/imgextra/i1/2067408037/O1CN01mnfnTx29EzijYD7Vn_!!2067408037.jpg" alt="" style="width: 396px;height: 450px;">
+                    </li>
+                </ul>`,
+            category: 'Multiple',
+            space: {
+                top: 20,
+                right: 40,
+            }, // 间隔
+            widget: [{
+                type: 'Popup',
+                config: {
+                    trigger: '.trigger',
+                    align: {
+                        node: '.trigger',
+                        points: ['cc', 'cc'],
+                        offset: [0, 0],
+                    },
+                },
+                mask: {
+                    dom: `<ul class="accordion">
+                            <li data-nav class="trigger-nav" style="float: left;margin-right: 6px;width: 396px;height: 450px;outline: none;">
+                                <a href="" data-link style="display: block;width: 396px;height: 450px;text-decoration: none;overflow: hidden;outline: none;">
+                                    <div class="panel-nav" style="display: none;height: 450px;">
+                                        <div style="margin: 330px auto 0;padding: 10px 0;width: 280px;background: rgba(255, 255, 255, .9);text-align: center;">
+                                            <div data-name style="color: #000;line-height: 48px;font-size: 22px;font-weight: bold;">当季新品</div>
+                                            <div data-desc style="display: inline-block;padding: 3px 30px;border-radius: 20px;background: red;color: #fff;line-height: 26px;font-size: 16px;">超多优惠, 快来抢!</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 450px;background: rgba(0, 0, 0, .3);"></div>
+                                </a>
+                            </li>
+                            <li data-nav class="trigger-nav" style="float: left;margin-right: 6px;width: 396px;height: 450px;outline: none;">
+                                <a href="" data-link style="display: block;width: 396px;height: 450px;text-decoration: none;overflow: hidden;outline: none;">
+                                    <div class="panel-nav" style="display: none;height: 450px;">
+                                        <div style="margin: 330px auto 0;padding: 10px 0;width: 280px;background: rgba(255, 255, 255, .9);text-align: center;">
+                                            <div data-name style="color: #000;line-height: 48px;font-size: 22px;font-weight: bold;">当季新品</div>
+                                            <div data-desc style="display: inline-block;padding: 3px 30px;border-radius: 20px;background: red;color: #fff;line-height: 26px;font-size: 16px;">超多优惠, 快来抢!</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 450px;background: rgba(0, 0, 0, .3);"></div>
+                                </a>
+                            </li>
+                            <li data-nav class="trigger-nav" style="float: left;width: 396px;height: 450px;outline: none;">
+                                <a href="" data-link style="display: block;width: 396px;height: 450px;text-decoration: none;overflow: hidden;outline: none;">
+                                    <div class="panel-nav" style="display: none;height: 450px;">
+                                        <div style="margin: 330px auto 0;padding: 10px 0;width: 280px;background: rgba(255, 255, 255, .9);text-align: center;">
+                                            <div data-name style="color: #000;line-height: 48px;font-size: 22px;font-weight: bold;">当季新品</div>
+                                            <div data-desc style="display: inline-block;padding: 3px 30px;border-radius: 20px;background: red;color: #fff;line-height: 26px;font-size: 16px;">超多优惠, 快来抢!</div>
+                                        </div>
+                                    </div>
+                                    <div style="height: 450px;background: rgba(0, 0, 0, .3);"></div>
+                                </a>
+                            </li>
+                        </ul>`,
+                },
+                imgSize: {
+                    width: 396,
+                    height: 450,
+                },
+            }, {
+                type: 'Accordion',
+                config: {
+                    triggerCls: 'trigger-nav',
+                    panelCls: 'panel-nav',
+                    triggerType: 'mouse',
+                },
+                target: '.accordion',
+                imgSize: {
+                    width: 396,
+                    height: 450,
+                },
+            }],
+            // 模板所需字段
+            itemProps: ['img', 'link', 'name', 'desc'],
+            count: 4,
+        }],
+    },
+}
+```
+复合组件模板可以整合单一组件模板, 具备更好的兼容性及扩展性
